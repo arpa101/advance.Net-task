@@ -1,0 +1,28 @@
+﻿@model List<task4.Models.Database.StuTable>
+@{
+    ViewBag.Title = "Scholarship";
+    Layout = "~/Views/Shared/_myLayoutPage1.cshtml";
+}
+
+<h2>Scholarship</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Department</th>
+        <th>Date of birth</th>
+        <th>Cgpa</th>
+    </tr>
+    @foreach (var s in Model)
+    {
+
+        <tr>
+            <td>@s.id</td>
+            <td>@s.Name</td>
+            <td>@s.Department </td>
+            <td>@s.Dob</td>
+            <td>@s.cgpa </td>
+        </tr>
+    }
+</table>
+

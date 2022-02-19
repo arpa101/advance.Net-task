@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_myLayoutPage1.cshtml";
+}
+
+<h2>Edit</h2>
+<form action="/Srudent/Edit" method="post">
+    <input type="text" name="Name" value="@Model.Name" class="form-control" placeholder="Name" /> <br /> <br />
+    <input type="hidden" name="id"  value="@Model.id" /><br /><br />
+
+    <input type="text" name="Department"  value="@Model.Department" class="form-control" placeholder="Department" /><br /><br />
+
+    <input type="text" name="Dob"  value="@Model.Dob" class="form-control" placeholder="Dob" /><br /><br />
+
+    <input type="text" name="cgpa"  value="@Model.cgpa" class="form-control" placeholder="cgpa" /><br /><br />
+
+    <input type="submit" value="Edit" />
+</form>
+

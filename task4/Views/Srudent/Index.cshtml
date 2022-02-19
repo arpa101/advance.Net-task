@@ -1,0 +1,33 @@
+﻿@model List<task4.Models.Database.StuTable>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_myLayoutPage1.cshtml";
+
+}
+
+<h2>Index</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Department</th>
+        <th>Date of birth</th>
+        <th>Cgpa</th>
+        <th></th>
+        <th></th>
+    </tr>
+    @foreach (var s in Model)
+    {
+
+<tr>
+    <td>@s.id</td>
+    <td>@s.Name</td>
+    <td>@s.Department </td>
+    <td>@s.Dob</td>
+    <td>@s.cgpa </td>
+    <td><a class="btn btn-info" href="/Srudent/Edit/@s.id">Edit</a></td>
+    <td><a class="btn btn-danger" href="/Srudent/Delete/@s.id">Delete</a></td>
+</tr>
+    }
+</table>
+
